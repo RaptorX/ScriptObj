@@ -623,6 +623,11 @@ licenseButtonSave(this, CtrlHwnd, GuiEvent, EventInfo, ErrLevel:="")
 	if this.IsLicenceValid(this.eddID, licenseNumber, "https://www.the-automator.com")
 	{
 		this.SaveLicense(this.eddID, LicenseNumber)
+		MsgBox, % 0x30
+		      , % "License Saved"
+		      , % "The license was applied correctly!`n"
+		        . "The program will start now."
+		
 		Reload
 	}
 	else
